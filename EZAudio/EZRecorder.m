@@ -232,13 +232,16 @@ typedef struct
                                                         sampleRate:sourceFormat.mSampleRate];
             break;
             
-        case EZRecorderFileTypeWAV:
-            asbd = [EZAudioUtilities stereoPCMFormatWithChannels:sourceFormat.mChannelsPerFrame 
+        case EZRecorderFileTypeWAV16:
+            asbd = [EZAudioUtilities PCMFormatIntegerWithChannels:sourceFormat.mChannelsPerFrame
                                                    andSampleRate:sourceFormat.mSampleRate];
             break;
-            
+			
+		case EZRecorderFileTypeWAV:
+			asbd = [EZAudioUtilities monoCanonicalFormatWithSampleRate:sourceFormat.mSampleRate];
+			break;
         default:
-            asbd = [EZAudioUtilities stereoCanonicalNonInterleavedFormatWithSampleRate:sourceFormat.mSampleRate];
+            asbd = [EZAudioUtilities monoCanonicalFormatWithSampleRate:sourceFormat.mSampleRate];
             break;
     }
     return asbd;

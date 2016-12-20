@@ -121,9 +121,9 @@
 
 //------------------------------------------------------------------------------
 
-+ (AudioStreamBasicDescription)stereoPCMFormatWithChannels:(int)channels andSampleRate:(float)sampleRate
++ (AudioStreamBasicDescription)PCMFormatIntegerWithChannels:(int)channels andSampleRate:(float)sampleRate
 {
-    return [EZAudioUtilities stereoPCMFormatWithChannels:channels andSampleRate:sampleRate];
+    return [EZAudioUtilities PCMFormatIntegerWithChannels:channels andSampleRate:sampleRate];
 }
 
 //------------------------------------------------------------------------------

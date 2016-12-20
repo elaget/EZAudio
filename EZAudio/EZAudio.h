@@ -253,7 +253,7 @@ FOUNDATION_EXPORT const unsigned char EZAudioVersionString[];
 	Bit Rate       : 262k
 	Sample Encoding: 16-bit Signed Integer PCM
 */
-+ (AudioStreamBasicDescription)stereoPCMFormatWithChannels:(int)channels andSampleRate:(float)sampleRate;
++ (AudioStreamBasicDescription)PCMFormatIntegerWithChannels:(int)channels andSampleRate:(float)sampleRate;
 
 //------------------------------------------------------------------------------
 

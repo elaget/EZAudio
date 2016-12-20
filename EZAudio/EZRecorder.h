@@ -53,7 +53,11 @@ typedef NS_ENUM(NSInteger, EZRecorderFileType)
     /**
      Recording format that describes WAV file types. These are uncompressed, LPCM files that are completely lossless, but are large in file size.
      */
-    EZRecorderFileTypeWAV
+    EZRecorderFileTypeWAV16,
+	/**
+	 Recording format that describes WAV file types. These are uncompressed, LPCM files that are completely lossless, but are large in file size.
+	 */
+	EZRecorderFileTypeWAV,
 };
 
 //------------------------------------------------------------------------------

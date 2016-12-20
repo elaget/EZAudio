@@ -284,7 +284,7 @@ BOOL __shouldExitOnCheckResultFail = YES;
 
 //------------------------------------------------------------------------------
 
-+ (AudioStreamBasicDescription)stereoPCMFormatWithChannels:(int)channels andSampleRate:(float)sampleRate
++ (AudioStreamBasicDescription)PCMFormatIntegerWithChannels:(int)channels andSampleRate:(float)sampleRate
 {
     AudioStreamBasicDescription asbd;
     UInt32 byteSize = 2;
