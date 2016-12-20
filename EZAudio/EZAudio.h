@@ -244,6 +244,21 @@ FOUNDATION_EXPORT const unsigned char EZAudioVersionString[];
 //------------------------------------------------------------------------------
 
 /**
+  ex:
+	Channels       : 1
+	Sample Rate    : 16000
+	Precision      : 16-bit
+	Duration       : 00:00:05.29 = 84706 samples ~ 397.059 CDDA sectors
+	File Size      : 174k
+	Bit Rate       : 262k
+	Sample Encoding: 16-bit Signed Integer PCM
+*/
++ (AudioStreamBasicDescription)stereoPCMFormatWithChannels:(int)channels andSampleRate:(float)sampleRate;
+
+//------------------------------------------------------------------------------
+
+
+/**
  Creates a two-channel, interleaved, float-based AudioStreamBasicDescription.
  @param sampleRate A float representing the sample rate.
  @deprecated This method is deprecated starting in version 0.1.0.

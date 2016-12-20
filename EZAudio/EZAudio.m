@@ -121,6 +121,13 @@
 
 //------------------------------------------------------------------------------
 
++ (AudioStreamBasicDescription)stereoPCMFormatWithChannels:(int)channels andSampleRate:(float)sampleRate
+{
+    return [EZAudioUtilities stereoPCMFormatWithChannels:channels andSampleRate:sampleRate];
+}
+
+//------------------------------------------------------------------------------
+
 + (AudioStreamBasicDescription)stereoFloatInterleavedFormatWithSampleRate:(float)sampleRate
 {
     return [EZAudioUtilities stereoFloatInterleavedFormatWithSampleRate:sampleRate];

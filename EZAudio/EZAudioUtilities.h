@@ -220,6 +220,18 @@ typedef NSRect EZRect;
  */
 + (AudioStreamBasicDescription)stereoCanonicalNonInterleavedFormatWithSampleRate:(float)sampleRate;
 
+/**
+  ex:
+  Channels       : 1
+  Sample Rate    : 16000
+  Precision      : 16-bit
+  Duration       : 00:00:05.29 = 84706 samples ~ 397.059 CDDA sectors
+  File Size      : 174k
+  Bit Rate       : 262k
+  Sample Encoding: 16-bit Signed Integer PCM
+*/
++ (AudioStreamBasicDescription)stereoPCMFormatWithChannels:(int)channels andSampleRate:(float)sampleRate;
+
 //------------------------------------------------------------------------------
 
 /**

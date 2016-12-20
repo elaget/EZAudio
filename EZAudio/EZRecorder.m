@@ -233,7 +233,8 @@ typedef struct
             break;
             
         case EZRecorderFileTypeWAV:
-            asbd = [EZAudioUtilities stereoFloatInterleavedFormatWithSampleRate:sourceFormat.mSampleRate];
+            asbd = [EZAudioUtilities stereoPCMFormatWithChannels:sourceFormat.mChannelsPerFrame 
+                                                   andSampleRate:sourceFormat.mSampleRate];
             break;
             
         default:

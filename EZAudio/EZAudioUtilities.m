@@ -284,6 +284,24 @@ BOOL __shouldExitOnCheckResultFail = YES;
 
 //------------------------------------------------------------------------------
 
++ (AudioStreamBasicDescription)stereoPCMFormatWithChannels:(int)channels andSampleRate:(float)sampleRate
+{
+    AudioStreamBasicDescription asbd;
+    UInt32 byteSize = 2;
+    asbd.mChannelsPerFrame = channels;
+    asbd.mBitsPerChannel   = 8 * byteSize;
+    asbd.mBytesPerFrame    = asbd.mChannelsPerFrame * byteSize;
+    asbd.mFramesPerPacket  = 1;
+    asbd.mBytesPerPacket   = asbd.mFramesPerPacket * asbd.mBytesPerFrame;
+    asbd.mFormatFlags      = kAudioFormatFlagIsPacked | kAudioFormatFlagIsSignedInteger;
+    asbd.mFormatID         = kAudioFormatLinearPCM;
+    asbd.mSampleRate       = sampleRate;
+    asbd.mReserved         = 0;
+    return asbd;
+}
+
+//------------------------------------------------------------------------------
+
 + (AudioStreamBasicDescription)stereoFloatInterleavedFormatWithSampleRate:(float)sampleRate
 {
     AudioStreamBasicDescription asbd;
